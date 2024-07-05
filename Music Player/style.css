@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@200&display=swap");
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  .box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.6s ease-in-out;
+    background: transparent;
+    color:#fff;
+  }
+  .box:hover input{
+    width: 100%;
+  }
+  .box a .fa-magnifying-glass{
+    color: #1daf;
+    font-size: 18px;
+  }
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 10px;
+  align-items: center;
+  position: fixed; /* Fixed positioning to stay at the top */
+  top: -85%; /* Aligns the header at the top of the viewport */
+  width: 100%; /* Takes full width of the viewport */
+}
+.imgs{
+  margin-right: auto;
+}
+.logo {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.nav_links {
+  list-style: none;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+}
+button {
+  padding: 9px 25px;
+  background-color: #0088a9;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: all 0.3s ease 0s;
+}
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+body {
+  display: flex;
+  font-family: "Ubuntu";
+  min-height: 100vh;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Standard syntax */
+}
+/* CSS for .popup */
+::selection {
+  color: #fff;
+  background: #7d2ae8;
+}
+.popup {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 380px;
+  width: 100%;
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
+  top: -150%;
+  pointer-events: none;
+  transition: top 0s 0.2s ease-in-out, opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+}
+.popup.show{
+  top:50%;
+  opacity: 1;
+  z-index: 1000;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0s 0.15s ease-in-out, opacity 0.15s 0s ease-in-out,
+  transform 0.15s 0s ease-in-out;
+}
+.popup :is(.field, .icons) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup header {
+  top: -20px;
+  left: 0px;
+}
+
+.icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+header .close {
+  color: #878787;
+  height: 33px;
+  width: 33px;
+  background: #f2f3fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.popup .content {
+  margin: 20px 0;
+}
+.content p {
+  font-size: 16px;
+}
+.content .icons {
+  margin: 15px 0 20px 0;
+}
+.icons a {
+  height: 45px;
+  width: 45px;
+  font-size: 21px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: all 0,3s ease-in-out;
+}
+.icons a:nth-child(4) {
+  color: #46c1f6;
+  border-color: #b6e7fc;
+}
+.icons a:nth-child(4):hover {
+  background: #46c1f6;
+}
+.icons a:nth-child(3) {
+  color: #e1306c;
+  border-color: #f5bccf;
+}
+.icons a:nth-child(3):hover {
+  background: #e1306c;
+}
+.icons a:nth-child(2) {
+  color: #25d366;
+  border-color: #bef4d2;
+}
+.icons a:nth-child(2):hover {
+  background: #25d366;
+}
+.icons a:nth-child(1) {
+  color: #1877f2;
+  border-color: #b7d4fb;
+}
+.icons a:nth-child(1):hover {
+  background: #1877f2;
+}
+.icons a:nth-child(5) {
+  color: #0088cc;
+  border-color: #b3e6ff;
+}
+.icons a:nth-child(5):hover {
+  background: #0088cc;
+}
+.icons a:hover {
+  color: #fff;
+  border-color: transparent;
+}
+.icons i {
+  transition: transform 0.3s ease-in-out;
+}
+.icons a:hover i {
+  transform: scale(1.2);
+}
+.content .field {
+  margin: 16px 0 -5px 0;
+  height: 45px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+.field i {
+  width: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+.field input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+}
+.field button {
+  padding: 5px 18px;
+  color: #fff;
+  font-weight: 500;
+  background: #7d2ae8;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.allow-select {
+  -webkit-user-select: auto; /* Safari */
+  -moz-user-select: auto; /* Firefox */
+  -ms-user-select: auto; /* Internet Explorer/Edge */
+  user-select: auto; /* Standard syntax */
+}
+.background {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: scale(0.5);
+}
+
+.background img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-width: 50%;
+  min-height: 50%;
+  filter: blur(15px);
+  -webkit-filter: blur(5px);
+  transform: scale(2.4);
+}
+
+.container {
+  background-color: #430b54;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 600px;
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 6px #151618; /* Box shadow with color and spread */
+  transition: all 0.5s ease;
+
+  /* Centering the container */
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.player-img {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 80px;
+  left: 23.5%;
+  animation: mymove 10s infinite;
+}
+
+.player-img img {
+  object-fit: cover;
+  border-radius: 140px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+.player-img img.active {
+  width: 100%;
+  height: 100%;
+  transition: all 0.001s;
+  opacity: 1;
+}
+
+.player-img:hover img {
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.8);
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.playlist {
+  position: absolute; /* Position the playlist absolutely */
+  margin: -390px 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Adjust the size of the circle as needed */
+  height: 40px; /* Adjust the size of the circle as needed */
+  border: 2px solid #61165c; /* Border color and width */
+  box-shadow: 0px 0px 6px #151618; /* Box shadow with color and spread */
+  border-radius: 50%; /* Rounded border to make it circular */
+  overflow: hidden; /* Clip any content that exceeds the circle */
+}
+.back {
+  position: fixed; /* Position the playlist absolutely */
+  margin: -390px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Adjust the size of the circle as needed */
+  height: 40px; /* Adjust the size of the circle as needed */
+  border: 2px solid #61165c; /* Border color and width */
+  box-shadow: 0px 0px 6px #151618; /* Box shadow with color and spread */
+  border-radius: 50%; /* Rounded border to make it circular */
+  overflow: hidden; /* Clip any content that exceeds the circle */
+}
+.playlist:active {
+  color: #000000de;
+  transform: scale(1.1);
+}
+.playlist:hover {
+  color: #000000de;
+  filter: brightness(40%);
+}
+.back:active {
+  color: #000000de;
+  transform: scale(1.1);
+}
+.back:hover {
+  color: #000000de;
+  filter: brightness(40%);
+}
+.musictit {
+  margin: 140px 0 0 10px;
+}
+h2 {
+  font-size: 31px;
+  color: #fff;
+  margin: 50px 0 0;
+  text-align: center;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+h3 {
+  font-size: 21px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  margin: 10px 0 0;
+}
+h4 {
+  font-size: 18px;
+  text-align: left;
+  color: #fff;
+  font-weight: 400;
+  margin: 15px 8px 5px -25px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.player-progress {
+  background-color: #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 45px 20px 0px;
+  height: 5px;
+  width: 90%;
+}
+
+.progress {
+  background-color: #29bac2;
+  border-radius: 5px;
+  margin: 6px 0px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* Volume Section */
+
+.volume-progress {
+  margin: 25px 25px 0px 60px;
+}
+#volumeIndicator {
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+}
+.mute {
+  position: absolute; /* Position the playlist absolutely */
+  margin: -20px 0px 0 -40px;
+  display: flex;
+  width: 40px; /* Adjust the size of the circle as needed */
+  height: 40px; /* Adjust the size of the circle as needed */
+  border: 2px solid #61165c; /* Border color and width */
+  box-shadow: 0px 0px 6px #151618; /* Box shadow with color and spread */
+  border-radius: 50%; /* Rounded border to make it circular */
+  overflow: hidden; /* Clip any content that exceeds the circle */
+}
+.share {
+  position: absolute; /* Position the playlist absolutely */
+  margin: -20px 0px 0 233px;
+  display: flex;
+  width: 40px; /* Adjust the size of the circle as needed */
+  height: 40px; /* Adjust the size of the circle as needed */
+  border: 2px solid #61165c; /* Border color and width */
+  box-shadow: 0px 0px 6px #151618; /* Box shadow with color and spread */
+  border-radius: 50%; /* Rounded border to make it circular */
+  overflow: hidden; /* Clip any content that exceeds the circle */
+}
+.mute:hover,
+.share:hover {
+  background-color: #ffcece;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+  height: 3px;
+  width: 15%;
+  background-color: #ea2bde;
+  cursor: pointer;
+}
+.currenttime,
+.durationtime {
+  color: #fff;
+  font-weight: 400;
+  font-size: 11px;
+}
+.music-duration,
+.player-controls {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.player-controls {
+  margin: 30px 20px 0px;
+  width: 335 px;
+}
+
+.fa-solid {
+  font-size: 23px;
+  font-weight: 400;
+  color: #666;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.1s ease;
+}
+.mute,
+.share {
+  color: #000000;
+}
+.fa-solid:hover {
+  filter: brightness(40%);
+  color: #000000de;
+}
+.fa-solid:active {
+  transform: scale(1.1);
+}
+
+.fa-solid.play-button {
+  font-size: 43px;
+  top: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Adjust the size of the circle as needed */
+  height: 50px; /* Adjust the size of the circle as needed */
+  border: 2px solid #61165c; /* Border color and width */
+  border-radius: 50%; /* Rounded border to make it circular */
+  box-shadow: 0 6px 6px #151618; /* Box shadow with color and spread */
+  overflow: hidden; /* Clip any content that exceeds the circle */
+}
+.fa-solid.backward,
+.fa-solid.forward,
+.fa-solid.shuffle,
+.fa-solid.repeat,
+.fa-solid.mute,
+.fa-solid.share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px; /* Adjust the size of the circle as needed */
+  height: 35px; /* Adjust the size of the circle as needed */
+  border: 2px solid #61165c; /* Border color and width */
+  border-radius: 50%; /* Rounded border to make it circular */
+  box-shadow: 6px 6px 6px #151618; /* Box shadow with color and spread */
+  overflow: hidden; /* Clip any content that exceeds the circle */
+}
+.playlists {
+  opacity: 1;
+}
